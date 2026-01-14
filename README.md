@@ -1,6 +1,6 @@
-# Forge "Hello, World!"
-
 This project contains a Forge app written in Javascript that displays "Hello, World!" in a Jira custom field.
+
+This will be built into a custom applicaton to display time in that custom field, but only to specific users.
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge,
 including the [documentation of Forge custom fields](https://developer.atlassian.com/platform/forge/manifest-reference/#jira-custom-field).
