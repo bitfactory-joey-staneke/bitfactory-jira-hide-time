@@ -1,0 +1,29 @@
+modules:
+  jira:customField:
+    - key: jira-hide-time-hello-world
+      name: Jira_hide_time
+      description: A hello world custom field.
+      type: string
+      edit:
+        resource: main
+        experience:
+          - issue-create
+          - issue-transition
+          - issue-view
+          - portal-request
+        validation:
+          expression: value == null || !!value.match("^[A-Za-z]+$")
+          errorMessage: The value must consist only of letters
+resources:
+  - key: main
+    path: static/hello-world/build
+permissions:
+  content:
+    styles:
+      - unsafe-inline
+app:
+  runtime:
+    name: nodejs24.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/db293e26-7501-415d-a84c-a0364e59fc1e
